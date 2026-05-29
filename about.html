@@ -36,6 +36,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            position: relative; /* Indispensable pour l'alignement des éléments enfants */
         }
 
         /* LE BANDEAU BLANC */
@@ -47,6 +48,31 @@
             padding: 18px 32px;
             border-radius: 4px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 10; /* Reste au-dessus de tout */
+        }
+
+        /* CONTENU HERO AVEC SUPERPOSITION */
+        .hero-title {
+            font-family: 'Coconat', serif;
+            font-size: 7rem;
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: -60px; /* Force l'image en dessous à remonter et chevaucher le texte */
+            position: relative;
+            z-index: 2; /* Place le texte au premier plan, par-dessus l'image */
+            pointer-events: none; /* Permet de cliquer à travers le texte si besoin */
+        }
+
+        .profile-img-container {
+            width: 260px;
+            height: 280px;
+            background-color: #ffffff;
+            margin-bottom: 40px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1; /* Place l'image un plan derrière le texte */
         }
 
         nav {
