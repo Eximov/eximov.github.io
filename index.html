@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camille Roussel — Art Director</title>
     <style>
-    /* 1. DÉCLARATION DE LA POLICE COCONAT */
+    /* 1. DÉCLARATION DE LA POLICE COCONAT REGULAR */
     @font-face {
         font-family: 'Coconat';
-        src: url('Coconat-Bold.woff2') format('woff2'), /* Si vous avez du woff2 (recommandé) */
-             url('Coconat-Bold.ttf') format('truetype'); /* Si vous avez du ttf */
-        font-weight: 800;
+        src: url('Coconat-Regular.woff2') format('woff2'),
+             url('Coconat-Regular.ttf') format('truetype');
+        font-weight: 400; /* 400 correspond à la déclinaison Regular / Normale */
         font-style: normal;
     }
 
@@ -22,7 +22,6 @@
     }
 
     body {
-        /* On garde une police sans-serif moderne par défaut pour le texte et le menu */
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
         background-color: #83b6e8;
         color: #000000;
@@ -33,9 +32,9 @@
         padding: 24px;
     }
 
-    /* ... (gardez le reste de votre code identique pour header, nav, etc.) ... */
+    /* ... (le reste de votre code pour header, nav, etc. reste identique) ... */
 
-    /* 3. HERO CONTENT (On applique Coconat ici) */
+    /* 3. HERO CONTENT */
     main {
         flex: 1;
         display: flex;
@@ -55,16 +54,16 @@
     }
 
     .title {
-        font-family: 'Coconat', serif; /* L'IA applique votre nouvelle police ici */
+        font-family: 'Coconat', serif;
         font-size: 5.5rem;
-        font-weight: 800;
+        font-weight: 400; /* Indispensable : on force le navigateur à utiliser le tracé Regular sans l'épaissir */
         line-height: 0.95;
         text-transform: uppercase;
-        letter-spacing: -1px; /* Ajusté légèrement car Coconat est une police Serif */
+        letter-spacing: -1px;
         max-width: 900px;
     }
 
-    /* ... (le reste du code responsive ne change pas) ... */
+    /* ... (le reste du code responsive reste identique) ... */
 </style>
 </head>
 <body>
